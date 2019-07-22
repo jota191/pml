@@ -35,4 +35,4 @@ val list_functor : functor⟨list⟩ =
   { fmap = map
   ; fid  = list_fid
   ; fap  = list_fap
-  }                                                            
+  }

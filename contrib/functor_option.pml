@@ -8,7 +8,7 @@ val option_fmap : ∀a b:ο, (a ⇒ b) ⇒ option⟨a⟩ ⇒ option⟨b⟩ =
     case o
       {
         None    → None
-      | Some[v] → Some[f v]                 
+      | Some[v] → Some[f v]
       }
   }
 
@@ -35,7 +35,7 @@ val option_fap : ∀a b c, ∀g ∈ (b ⇒ c), ∀f ∈ (a ⇒ b), ∀x ∈ opti
         None    → qed
       | Some[v] → eqns option_fmap (comp g f) x
                   ≡ option_fmap (comp g f) (Some[v])
-                  ≡ (Some[(comp g f v)]) 
+                  ≡ (Some[(comp g f v)])
                   ≡ (Some[(g (f v))]);
                   eqns comp (option_fmap g) (option_fmap f) x
                   ≡ comp (option_fmap g) (option_fmap f) (Some[v])
