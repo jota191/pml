@@ -1,5 +1,7 @@
+// functor class
 
 
+// this should be moved elsewhere
 val id : ∀a, a ⇒ a = fun x {x}
 val comp : ∀ a b c, (b ⇒ c) ⇒ (a ⇒ b) ⇒ a ⇒ c
   = fun g f {

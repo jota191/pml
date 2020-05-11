@@ -12,7 +12,7 @@ val rec list_fid : ∀a:ο, ∀l ∈ list⟨a⟩, map id l ≡ l =
 
 
 val rec list_fap : ∀a b c, ∀g ∈ (b ⇒ c), ∀f ∈ (a ⇒ b), ∀l ∈ list⟨a⟩,
-                  map (g ∘ f) l ≡ ((map g) ∘ (map f)) l =
+                  map (g ∘ f) l ≡ (map g ∘ map f) l =
   fun g f l {
     case l {
        [] → qed
